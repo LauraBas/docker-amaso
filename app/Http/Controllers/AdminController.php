@@ -33,8 +33,7 @@ class AdminController extends Controller
         
 
     public function deleteArtisan($id)
-    {
-        
+    {        
         $user_id = $this->artisanRepo->getUserIdFromArtisan($id);
         $this->artisanRepo->setUserArtisanToFalse($user_id);
         $this->artisanRepo->deleteArtisan($id);
